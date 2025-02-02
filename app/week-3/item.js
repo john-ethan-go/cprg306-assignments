@@ -1,22 +1,12 @@
 // name, quantity, and category properties
 
-function Name(props) {
-  return <h2>{props.name}</h2>;
-}
-
-function Quantity(props) {
-    return <p>Quantity: {props.quantity}</p>;
-}
-
-function Category(props) {
-    return <p>Category: {props.category}</p>;
-}
 
 
-export default function Item() {
+export default function Item({ name, quantity, category }) {
   return (
-    <div>
-      <Name
-    </div>
+    <section  className="bg-slate-700 m-2 p-2">
+      <h2 className="font-bold text-lg text-sky-500">{name}</h2>
+      <p className="ml-1">Buy {quantity} in {category}</p>
+    </section>
   );
 }
