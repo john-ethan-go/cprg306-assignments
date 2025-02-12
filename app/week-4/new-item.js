@@ -18,15 +18,21 @@ export default function NewItem() {
     }
 
     return (
-        <div> 
-            <p>{quantity}</p>
-            <button onClick={increment} className="bg-blue-500 hover:bg-blue-700 active:bg-red-500 w-38 round">
-                +
-                </button>
+        <div className="p-2 m-4 bg-white rounded w-36"> 
+            <div className="flex justify-between">
+                <span className="w-1/2 text-black">{quantity}</span>
+                <div className="flex">
+                    
+                    <button onClick={increment} className="w-8  bg-blue-500 hover:bg-blue-700 active:bg-red-500  rounded">
+                    +
+                    </button>
 
-            <button onClick={decrement} className="bg-blue-500 hover:bg-blue-700 active:bg-red-500 w-38 round">
-                -
-                </button>
+                    <button onClick={decrement} className="w-8  bg-blue-500 hover:bg-blue-700 active:bg-red-500  rounded ml-1">
+                    -
+                    </button>
+
+                </div>
+            </div>
         </div>
     )
 }
